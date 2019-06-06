@@ -2,7 +2,7 @@
 
 ## Chapter 04 - Building a REST API
 
-### User 
+### Superuser
 
 cb
 cbpassword
