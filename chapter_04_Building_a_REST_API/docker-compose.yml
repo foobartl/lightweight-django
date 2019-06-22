@@ -1,5 +1,13 @@
-version: '3'
+version: '3.7'
 
 services:
   db: 
-    image: postgres
+    image: postgres:9.6
+    volumes:
+      - ./data/pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: django
+      POSTGRES_PASSWORD: django
+      POSTGRES_DB: scrum
