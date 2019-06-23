@@ -38,15 +38,15 @@ class TaskSerializer(serializers.ModelSerializer):
                   'status', 'status_display', 'order',
                   'assigned', 'started', 'due', 'completed', 'links')
 
-        def get_status_display(self, obj):
-            return obj.get_status_display()
+    def get_status_display(self, obj):
+        return obj.get_status_display()
 
-        def get_links(self, obj):
-            request = self.context['request']
-            return {
-                'self': reverse('task-detail',
-                                kwargs={'pk': obj.pk}, request=request),
-            }
+    def get_links(self, obj):
+        request = self.context['request']
+        return {
+            'self': reverse('task-detail',
+                            kwargs={'pk': obj.pk}, request=request),
+        }
 
 
 class UserSerializer(serializers.ModelSerializer):
