@@ -1,4 +1,4 @@
-Pillow==3.3.2
+Pillow==6.2.0
 Django==2.1.5
 django-compressor==2.2
 
